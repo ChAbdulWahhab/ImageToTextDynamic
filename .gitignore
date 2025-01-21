@@ -1,0 +1,53 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# Python packaging files
+*.egg-info/
+*.eggs/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Test coverage reports
+htmlcov/
+*.coverage
+.coverage.*
+
+# Environment variables
+.env
+.env.local
+
+# Database files
+*.sqlite3
+*.db
+
+# Images and output files
+output/
+*.png
+*.jpg
+*.jpeg
+*.bmp
+
+# Others
+*.pdf

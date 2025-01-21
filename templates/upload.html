@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribe - Convert Audio, Video, and Images to Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/image-gallery.png') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="nav-brand">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='media/image-gallery.png') }}" alt="">
+            </div>
+            <span>Transcribe</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link">About us</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="upload-section">
+                <div class="asterisk">*</div>
+                <div class="upload-box">
+                    <h2>Upload</h2>
+                    <div class="upload-content" id="drop-area" onclick="document.getElementById('file-input').click();">
+                        <div class="upload-icon">+</div>
+                        <p class="upload-text">Browse to upload</p>
+                        <p class="upload-info">
+                            Supports all image, <br> formats,
+                            up to 100MB
+                        </p>
+                    </div>
+                    <input type="file" name="file" id="file-input">
+                </div>
+            </div>
+
+            <div class="content-section">
+                <div class="header">
+                    <div class="brand">
+                        <span class="brand-name">AI Transcribe</span>
+                        <span class="brand-by">BY TRANSCRIBE</span>
+                    </div>
+                    <h1>Turn image files into text with just one click.</h1>
+                </div>
+
+                <div class="terms">
+                    By uploading, you agree to our <a href="#">Terms of Service</a> and have read our
+                    <a href="#">Privacy Policy</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <button onclick="closePopup()" class="close-icon"><i class='bx bx-plus' style="transform: rotate(45deg);"></i></button>
+            <img id="popup-image" src="" alt="Uploaded Image">
+            <textarea id="popup-text" readonly style="resize: none;"></textarea>
+            <button onclick="copyText()" class="copy-btn" id="copy"><i class='bx bx-copy'></i> Copy</button>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="logo">
+                        <img src="{{ url_for('static', filename='media/image-gallery.png') }}" alt="">
+                    </div>
+                    <div class="footer-text">
+                        <p class="footer-title">Transcribe anything directly on Transcribe</p>
+                        <p class="footer-subtitle">
+                            Get started with Transcribe to unlock more powerful AI features to keep yourself organized
+                        </p>
+                    </div>
+                </div>
+                <button class="start-btn" onclick="startFree()">Start for free</button>
+            </div>
+        </footer>
+    </main>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
